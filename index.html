@@ -190,7 +190,6 @@
 
       <div class="divider"></div>
 
-      <!-- ✅ 你指定：Fed 資產單月變動（億）要新增註解或說明（版面不變，只補齊 hints/text） -->
       <div class="metric">
         <div class="metric-title">Fed 資產單月變動（億）</div>
         <div class="metric-values">
@@ -228,7 +227,6 @@
 
       <div class="divider"></div>
 
-      <!-- ✅ 你指定：逆回購 RRP 註解重新整理（不改版面，只把文字變更成更好讀） -->
       <div class="metric">
         <div class="metric-title">逆回購 RRP（兆美元）</div>
         <div class="metric-values">
@@ -308,29 +306,22 @@
 
   </section>
 
-  <!-- ===== PDF Viewer ===== -->
+  <!-- ===== PDF Viewer (restore old simple style) ===== -->
   <section class="viewer" id="viewer">
-    <div class="viewer-head">
-      <div>
-        <h2>PDF 線上預覽</h2>
-        <p class="viewer-sub">
-          你可以直接在網頁內閱讀手冊，也可以開新分頁或下載。若無法內嵌顯示，請使用「新分頁」。
-        </p>
-      </div>
+    <h2 class="viewer-title">PDF 線上預覽</h2>
+    <p class="viewer-sub">
+      你可以直接在網頁內閱讀手冊。若無法內嵌顯示，請使用
+      <a class="inline-link" href="handbook.pdf" target="_blank" rel="noopener">新分頁</a>
+      或
+      <a class="inline-link" href="handbook.pdf" download>下載</a>。
+    </p>
 
-      <div class="viewer-actions">
-        <a class="btn small" href="handbook.pdf" target="_blank" rel="noopener">新分頁</a>
-        <a class="btn small" href="handbook.pdf" download>下載</a>
-      </div>
-    </div>
-
-    <div class="viewer-frame">
-      <object class="pdf" data="handbook.pdf" type="application/pdf">
-        <p class="fallback">
-          你的瀏覽器不支援內嵌 PDF，請 <a href="handbook.pdf" target="_blank" rel="noopener">點此開啟</a>。
-        </p>
-      </object>
-    </div>
+    <object class="pdf" data="handbook.pdf" type="application/pdf">
+      <p class="fallback">
+        你的瀏覽器不支援內嵌 PDF，請
+        <a href="handbook.pdf" target="_blank" rel="noopener">點此開啟</a>。
+      </p>
+    </object>
   </section>
 
   <!-- ===== 資料來源 ===== -->
