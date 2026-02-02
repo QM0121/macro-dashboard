@@ -1,190 +1,155 @@
-/* =========================
-   基本變數設定
-========================= */
 :root{
   --bg:#0b1020;
-  --panel:#121a33;
-  --panel-soft:#0f1630;
-  --text:#e5e7eb;
-  --muted:#9ca3af;
-  --accent:#60a5fa;
+  --panel:#111a36;
   --border:rgba(255,255,255,.08);
+  --text:#e6eaf2;
+  --muted:#a0a8bc;
+  --accent:#60a5fa;
 }
 
-/* =========================
-   全域設定
-========================= */
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
-html,body{
+body{
   margin:0;
-  padding:0;
   background:var(--bg);
   color:var(--text);
-  font-family:-apple-system,BlinkMacSystemFont,
-               "Segoe UI","Noto Sans TC",
-               "PingFang TC","Microsoft JhengHei",
-               sans-serif;
-  line-height:1.6;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif;
 }
 
-a{
-  color:var(--accent);
-  text-decoration:none;
-}
-a:hover{
-  text-decoration:underline;
-}
-
-/* =========================
-   版面容器
-========================= */
 .container{
   max-width:1100px;
-  margin:0 auto;
+  margin:auto;
   padding:0 20px;
 }
 
-/* =========================
-   Header
-========================= */
+/* ===== Header ===== */
 .header{
-  padding:48px 0 36px;
+  padding:56px 0 40px;
   border-bottom:1px solid var(--border);
 }
 
+.header-top{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:12px;
+}
+
 .badge{
-  display:inline-block;
-  font-size:12px;
-  letter-spacing:.4px;
-  padding:4px 10px;
+  padding:6px 12px;
   border-radius:999px;
   background:rgba(96,165,250,.15);
   color:var(--accent);
-  margin-bottom:14px;
+  font-size:12px;
 }
 
-.version{
-  font-size:13px;
+.status{
+  font-size:12px;
   color:var(--muted);
-  margin:6px 0 12px;
 }
 
 h1{
-  font-size:34px;
-  margin:0 0 10px;
-  letter-spacing:.5px;
+  font-size:38px;
+  margin:0 0 8px;
 }
 
-.sub{
+.subtitle{
   font-size:14px;
   color:var(--muted);
-  margin:0 0 22px;
+  margin-bottom:18px;
 }
 
-/* =========================
-   Header Actions
-========================= */
-.actions{
+.header-meta{
+  font-size:13px;
+  color:var(--muted);
+  display:flex;
+  gap:16px;
+}
+
+.header-actions{
+  margin-top:18px;
   display:flex;
   gap:10px;
-  flex-wrap:wrap;
 }
 
+/* ===== Buttons ===== */
 .btn{
-  font-size:14px;
-  padding:10px 14px;
-  border-radius:10px;
   border:1px solid var(--border);
   background:transparent;
   color:var(--text);
+  padding:10px 14px;
+  border-radius:10px;
   cursor:pointer;
-}
-
-.btn:hover{
-  background:rgba(255,255,255,.05);
-}
-
-.btn-small{
   font-size:14px;
+}
+
+.btn.primary{
+  background:var(--accent);
+  color:#041226;
+  border:none;
+}
+
+.btn.small{
   padding:8px 12px;
-}
-
-.btn.ghost{
-  color:var(--text);
-}
-
-/* =========================
-   更新說明
-========================= */
-.update-note{
-  margin:28px 0 14px;
   font-size:13px;
-  color:var(--muted);
 }
 
-/* =========================
-   卡片區塊
-========================= */
+/* ===== Grid ===== */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:20px;
-  margin-top:20px;
+  gap:18px;
+  padding:30px 0;
 }
 
 .card{
   background:var(--panel);
   border:1px solid var(--border);
   border-radius:14px;
-  padding:18px 18px 16px;
+  padding:18px;
 }
 
 .card h2{
   font-size:18px;
-  margin:0 0 12px;
-  letter-spacing:.3px;
+  margin:0 0 6px;
 }
 
-/* =========================
-   清單與指標
-========================= */
-.card ul{
-  list-style:none;
-  padding:0;
-  margin:0;
-}
-
-.card li{
+.desc{
+  font-size:13px;
+  color:var(--muted);
   margin-bottom:14px;
 }
 
-.card li:last-child{
-  margin-bottom:0;
+/* ===== Metrics ===== */
+.metric{
+  margin-bottom:14px;
 }
 
-.metric-meta{
-  display:block;
-  margin-top:4px;
+.metric-title{
+  font-size:14px;
+  margin-bottom:6px;
+}
+
+.metric-values{
+  display:flex;
+  gap:10px;
   font-size:13px;
-  color:var(--muted);
-  letter-spacing:.2px;
 }
 
-.metric-note{
-  display:block;
+.metric-values span{
+  background:rgba(255,255,255,.05);
+  padding:6px 10px;
+  border-radius:999px;
+}
+
+.note{
   font-size:12px;
   color:var(--muted);
-  margin-top:2px;
+  margin-top:4px;
 }
 
-/* =========================
-   PDF Viewer
-========================= */
+/* ===== PDF ===== */
 .viewer{
-  margin:42px 0;
+  margin:40px 0;
 }
 
 .viewer-head{
@@ -194,41 +159,23 @@ h1{
   margin-bottom:10px;
 }
 
-.viewer-head h2{
-  font-size:20px;
-  margin:0;
-}
-
-.viewer-actions{
-  display:flex;
-  gap:8px;
-}
-
 .pdf{
   width:100%;
-  height:78vh;
+  height:75vh;
   border:1px solid var(--border);
   border-radius:12px;
-  background:var(--panel-soft);
 }
 
-/* =========================
-   Footer
-========================= */
+/* ===== SEO hidden ===== */
+.seo-text{
+  position:absolute;
+  left:-9999px;
+}
+
+/* ===== Footer ===== */
 .footer{
-  padding:28px 0 36px;
   border-top:1px solid var(--border);
-  margin-top:40px;
+  padding:26px 0;
   text-align:center;
-}
-
-.footer .muted{
-  font-size:13px;
-}
-
-/* =========================
-   工具類
-========================= */
-.muted{
   color:var(--muted);
 }
